@@ -13,9 +13,13 @@ git:
 
 install:
   - pip install -r requirements_dev.txt
+  - pip install coveralls pyyaml
 
 script:
   - make ci-test
+
+after_success:
+  - coveralls
 
 cache:
   pip: true
