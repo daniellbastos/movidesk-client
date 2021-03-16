@@ -2,6 +2,9 @@
 movedesk-client
 ===============
 
+.. image:: https://travis-ci.org/daniellbastos/movidesk-client.svg?branch=master
+    :target: https://travis-ci.org/daniellbastos/movidesk-client
+
 Requirements
 ~~~~~~~~~~~~
 
