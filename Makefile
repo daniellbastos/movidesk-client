@@ -22,5 +22,8 @@ release: dist
 	git push origin `python setup.py -q version`
 	twine upload dist/*
 
+ci-test:
+	pytest --cov=. --cov-report xml
+
 test:
 	pytest --cov=. --cov-report term
