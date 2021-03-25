@@ -1,10 +1,11 @@
+import json
 import requests
 
 
 class MovideskClient:
     HOST = 'https://api.movidesk.com/public/v1'
     HEADERS = {
-        'content-type': 'application/json',
+        'Content-Type': 'application/json',
     }
     RESOURCES = {
         'persons': '/persons',
@@ -19,8 +20,8 @@ class MovideskClient:
 
     def person_create(self, data):
         url = self._get_url(self.RESOURCES['persons'])
-        return requests.post(url, data, headers=self.HEADERS)
+        return requests.post(url, json.dumps(data), headers=self.HEADERS)
 
     def ticket_create(self, data):
         url = self._get_url(self.RESOURCES['tickets'])
-        return requests.post(url, data, headers=self.HEADERS)
+        return requests.post(url, json.dumps(data), headers=self.HEADERS)
