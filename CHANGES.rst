@@ -1,6 +1,12 @@
 Changelog
 ---------
 
+1.0.1
+~~~~~
+
+* Fix to treat payload
+
+
 1.0.0
 ~~~~~
 
